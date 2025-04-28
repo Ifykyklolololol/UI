@@ -1,82 +1,42 @@
-# 🌟 Simpliness UI Library
+# SolixHub UI Library
 
-Simpliness is a lightweight, highly animated, themeable, and customizable Roblox UI library made for creating stunning script GUIs.  
-It features built-in notifications, color pickers, keybind lists, tab/section systems, and full configuration support.
+<div align="center">
+  
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+[![Discord](https://img.shields.io/badge/Discord-Join-7289DA?logo=discord&logoColor=white)](https://discord.gg/asmRUareFb)
 
----
+**A powerful and elegant UI library for Roblox scripting**
 
-## ✨ Features
+![UI Preview](https://i.imgur.com/YourImageHere.png)
 
-- ⚙️ Layout Switching: Supports both `CSGO` and `Kavo` layouts.
-- 🎨 Theme Accent Colors: Change accent colors dynamically.
-- 🔔 In-Game Notifications System.
-- 🔥 Animated Tabs and Sections.
-- 🎯 Customizable Keybind List.
-- 🎨 Color Picker with HSV support.
-- 🎛️ Auto-Save and Load Configurations.
-- 📦 Blur & Depth of Field Effects for aesthetic UI.
-- 🖱️ Mobile Button Support.
-- 🗃️ Watermark Creation.
-- 🏗️ Highly Modular API.
+</div>
 
----
+## 📋 Table of Contents
 
-## 📚 Usage Example
+- [Installation](#-installation)
+- [Features](#-features)
+- [Components](#-components)
+  - [Window](#window)
+  - [Tab](#tab)
+  - [Section](#section)
+  - [Toggle](#toggle)
+  - [Button](#button)
+  - [Slider](#slider)
+  - [Dropdown](#dropdown)
+  - [Textbox](#textbox)
+  - [Keybind](#keybind)
+  - [Colorpicker](#colorpicker)
+- [Utility Functions](#-utility-functions)
+  - [Notifications](#notifications)
+  - [Watermark](#watermark)
+  - [Keybind List](#keybind-list)
+  - [Layout Switching](#layout-switching)
+  - [Config Management](#config-management)
+- [Examples](#-examples)
+- [Support](#-support)
+
+## 📥 Installation
 
 ```lua
--- ADD FULL SOURCE HERE
-
--- Create a window
-local Window = Library:Window({
-    Name = "Simpliness UI"
-})
-
--- Create a tab
-local AimbotTab = Window:Tab({
-    Name = "Aimbot"
-})
-
--- Create a section
-local AimbotSection = AimbotTab:Section({
-    Name = "Aimbot Settings",
-    Side = "Left"
-})
-
--- Add a toggle
-AimbotSection:Toggle({
-    Name = "Enable Aimbot",
-    State = false,
-    Callback = function(state)
-        print("Aimbot Enabled:", state)
-    end
-})
-
-Library.Notify({
-    Title = "Notification Title",
-    Content = "This is the message content.",
-    Duration = 5, -- seconds
-    Color = Color3.fromRGB(255, 188, 254)
-})
-
-Section:ColorPicker({
-    Name = "Pick a Color",
-    Default = Color3.fromRGB(255, 255, 255),
-    Callback = function(color)
-        print("Selected Color:", color)
-    end
-})
--- Save Flags
-local configText = Library:GetConfig()
-writefile("yourconfig.cfg", configText)
-
--- Load Flags
-if isfile("yourconfig.cfg") then
-    local configText = readfile("yourconfig.cfg")
-    Library:LoadConfig(configText)
-end
-
-
-
-
-
-
+-- Add source code at the top of the script.
