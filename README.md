@@ -50,22 +50,33 @@ AimbotSection:Toggle({
         print("Aimbot Enabled:", state)
     end
 })
-```
+
+Library.Notify({
+    Title = "Notification Title",
+    Content = "This is the message content.",
+    Duration = 5, -- seconds
+    Color = Color3.fromRGB(255, 188, 254)
+})
+
+Section:ColorPicker({
+    Name = "Pick a Color",
+    Default = Color3.fromRGB(255, 255, 255),
+    Callback = function(color)
+        print("Selected Color:", color)
+    end
+})
+-- Save Flags
+local configText = Library:GetConfig()
+writefile("yourconfig.cfg", configText)
+
+-- Load Flags
+if isfile("yourconfig.cfg") then
+    local configText = readfile("yourconfig.cfg")
+    Library:LoadConfig(configText)
+end
 
 
-Method | Description
-Library:Window(options) | Creates a new window.
-Window:Tab(options) | Creates a new tab in the window.
-Tab:Section(options) | Creates a new section within a tab.
-Section:Toggle(options) | Creates a toggle element.
-Library.Notify(table) | Displays an in-game notification.
-Library.SetLayout(layout) | Switches between CSGO or Kavo layout.
-Library.ChangeAccent(color) | Changes the accent color globally.
-Library.GetConfig() | Returns all flag values as text for saving config.
-Library.LoadConfig(configText) | Loads settings from a config text.
-Library.SetOpen(boolean) | Opens or closes the entire UI.
-Library.Destroy() | Cleans up and removes the UI.
-Library.Watermark({Text = "Your Watermark"}) | Adds a dynamic watermark to the UI.
-Library.CreateKeybindList() | Creates the keybind list window.
-Library.ToggleKeybindList() | Toggles keybind list visibility.
-Library.CreateMobileButton() | Creates a button for mobile users to open the UI.
+
+
+
+
