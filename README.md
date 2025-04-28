@@ -40,3 +40,12 @@
 
 ```lua
 -- Add source code at the top of the script.
+```
+
+# Window 
+```lua
+Library:Window({
+    Name = "SolixHub"
+})
+```
+
