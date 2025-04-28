@@ -50,6 +50,7 @@ AimbotSection:Toggle({
         print("Aimbot Enabled:", state)
     end
 })
+```
 
 
 Method | Description
