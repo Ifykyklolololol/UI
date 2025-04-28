@@ -24,7 +24,7 @@ It features built-in notifications, color pickers, keybind lists, tab/section sy
 ## 📚 Usage Example
 
 ```lua
-local Library = loadstring(game:HttpGet("YOUR_SOURCE_LINK_HERE"))()
+-- ADD FULL SOURCE HERE
 
 -- Create a window
 local Window = Library:Window({
