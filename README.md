@@ -171,10 +171,23 @@ Library:Notify({
 })
 ```
 
-# Window 
+# Delete Ui + All Connections  
 ```lua
-Library:Window({
-    Name = "SolixHub"
+Main:Button({
+	Name = "Delete Gui",
+	Callback = function()
+		Library:Destroy()
+	end,
+})
+```
+
+# Close/Open Keybind List  
+```lua
+Main:Button({
+	Name = "Close/Open Keybind List",
+	Callback = function()
+		Library:TurnKeybindList()
+	end,
 })
 ```
 
