@@ -50,3 +50,21 @@ AimbotSection:Toggle({
         print("Aimbot Enabled:", state)
     end
 })
+
+
+Method | Description
+Library:Window(options) | Creates a new window.
+Window:Tab(options) | Creates a new tab in the window.
+Tab:Section(options) | Creates a new section within a tab.
+Section:Toggle(options) | Creates a toggle element.
+Library.Notify(table) | Displays an in-game notification.
+Library.SetLayout(layout) | Switches between CSGO or Kavo layout.
+Library.ChangeAccent(color) | Changes the accent color globally.
+Library.GetConfig() | Returns all flag values as text for saving config.
+Library.LoadConfig(configText) | Loads settings from a config text.
+Library.SetOpen(boolean) | Opens or closes the entire UI.
+Library.Destroy() | Cleans up and removes the UI.
+Library.Watermark({Text = "Your Watermark"}) | Adds a dynamic watermark to the UI.
+Library.CreateKeybindList() | Creates the keybind list window.
+Library.ToggleKeybindList() | Toggles keybind list visibility.
+Library.CreateMobileButton() | Creates a button for mobile users to open the UI.
