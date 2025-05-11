@@ -71,6 +71,27 @@ LeftSection:Toggle({
 })
 ```
 
+# TextLabels 
+```lua
+local textLabel = LeftMainSection:TextLabel({
+    Text = "Lilix Is a BETA",
+    TextColor = Color3.fromRGB(120, 120, 120),
+    TextSize = 14
+})
+```
+
+## Updating The Text
+```lua
+textLabel:Set("LILIX Is a MEGA BETA")
+```
+
+## Updating The Texts Color
+```lua
+textLabel:SetColor(Color3.fromRGB(255, 188, 254))
+```
+
+
+
 # Button 
 ```lua
 LeftSection:Button({
